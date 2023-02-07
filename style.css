@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+:root {
+  --background: #0055f8;
+  --text: #000000;
+  --btn-text: #fff;
+  --background-left: white;
+  --title-size: 30px;
+  --mid-img: 250px;
+  --mobile-img: 150px;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-left);
+  width: 50vw;
+  height: 100vh;
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  width: 50vw;
+  height: 100vh;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+.logo h3 {
+  font-size: var(--title-size);
+  color: var(--btn-text);
+}
+.logo p {
+  margin-top: 10px;
+  color: var(--btn-text);
+}
+.logo img {
+  height: 300px;
+}
+form {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+form h3 {
+  font-size: var(--title-size);
+}
+form input {
+  margin-top: 10px;
+  width: 350px;
+  outline: none;
+  padding: 8px;
+  transition: 0.4s;
+}
+form p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+form a {
+  text-decoration: none;
+  color: var(--background);
+}
+form input[type="submit"] {
+  background-color: var(--background);
+  color: var(--btn-text);
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+form input[type="submit"]:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+  transition: 0.4s;
+}
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+}
+.checkbox input {
+  width: 10px;
+  cursor: pointer;
+}
+.checkbox span {
+  margin-left: 5px;
+  margin-top: 11px;
+}
+.cicle-1 {
+  margin-right: 100px;
+  background-color: aqua;
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: 977px) {
+  .logo img {
+    height: var(--mid-img);
+  }
+}
+@media (max-width: 828px) {
+  .main {
+    flex-direction: column;
+  }
+  .left {
+    width: 100vw;
+  }
+  .right {
+    width: 100vw;
+  }
+  .logo img {
+    height: var(--mobile-img);
+  }
+  form input {
+    width: 250px;
+  }
+  .logo h3 {
+    font-size: 20px;
+  }
+  .logo p {
+    font-size: 14px;
+  }
+  form p {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+}
